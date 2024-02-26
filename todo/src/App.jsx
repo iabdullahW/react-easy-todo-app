@@ -27,8 +27,10 @@ function App() {
         {list.map((name, index) => {
           return (
             <div key={index} className="todo-item">
-              <p>{name}</p>
+              <>
+              <p key={index}>{name}</p>
               <button onClick={() => handleDelete(index)} className="delete-button">X</button>
+              </>
             </div>
           )
         })}
